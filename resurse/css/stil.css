@@ -1,0 +1,51 @@
+body{
+    --culoare1:#000814;
+    --culoare2:#001D3D;
+    --culoare3:#003566;
+    --culoare4:#ffc300;
+    --culoare5:#ffd60a;
+    --culoare6:white;
+    --spatiere:50px;
+    background-color: #001D3D;
+    padding-left: var(--spatiere); 
+    padding-right: var(--spatiere);
+}
+
+h1{
+    color: white;
+}
+
+body p{
+    color: white;
+}
+
+
+tr{
+    color: white;
+}
+
+h2{
+    color: #ffc300;
+}
+
+h3{
+    color: #ffc300;
+}
+
+footer{
+    color: white;
+}
+
+q{
+    font-style: italic;
+}
+
+figcaption{
+    color: white;
+}
+
+.atentionare {
+    color: red;
+    font-weight: bold;
+}
+

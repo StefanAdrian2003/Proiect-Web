@@ -1,0 +1,128 @@
+html{
+    font-size: 18px;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#grid-pagina{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1rem;
+    grid-template-areas: "welcome               welcome              welcome"
+                         "welcome               welcome              welcome"
+                         "calendar-evenimente   orar                 anunturi"
+                         "utilizatori           orar                 anunturi"
+                         "utilizatori           date-utilizatori     date-site";
+    overflow:unset;
+}
+
+
+
+#grid-pagina>*{
+    outline: 2px solid #ffc300;
+    padding: 1em;
+}
+
+
+
+
+
+#welcome{
+    grid-area: welcome;
+}
+
+#tab-orar{
+    grid-area: orar;
+}
+
+#calendar-evenimente{
+    grid-area: calendar-evenimente;
+}
+
+#anunturi{
+    grid-area: anunturi;
+}
+
+#utilizatori{
+    grid-area: utilizatori;
+}
+
+#date-utilizatori{
+    grid-area: date-utilizatori;
+}
+
+#date-site{
+    grid-area: date-site;
+}
+
+#restul{
+    grid-area: restul;
+}
+
+
+#clipuri-video{
+    grid-area: clipuri-video;
+}
+
+#oferte{
+    grid-area: oferte;
+}
+
+
+
+#intrebari_frecvente{
+    grid-area: intrebari_frecvente;
+}
+
+#oferte_speciale{
+    grid-area: oferte_speciale;
+}
+
+#sectiuni_explicative{
+    grid-area: sectiuni_explicative;
+}
+
+#frecvente{
+    grid-area: frecvente;
+}
+
+#iframe{
+    grid-area: iframe;
+}
+
+
+@media screen and (max-width:1200px){
+
+    html{
+        font-size: 15px;
+    }
+
+    #grid-pagina{
+        grid-template-columns: repeat(2,1fr);   /*1fr 1fr 1fr ;*/
+        grid-template-areas: "welcome  welcome"
+                             "promotii promotii"
+                             "orar orar"
+                             "fig1 produse "
+                             "fig2 produse "
+                             "fig3 produse "
+                             "index-intrebari index-intrebari "
+                             "anunturi anunturi ";
+    }
+}
+
+@media screen and (max-width:800px){
+
+    html{
+        font-size: 12px;
+    }
+
+    #grid-pagina{
+        display: block;
+    }
+}
+
+
+
