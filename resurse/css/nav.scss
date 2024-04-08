@@ -1,72 +1,85 @@
-nav {
-    --inaltime-meniu: 2.5em;
-    --latime-buton: 150px;
-    height: var(--inaltime-meniu);
-    background-color: var(--culoare-deschisa);
-}
-
-
-
-// Variabilele pentru culori și înălțimea meniului
-$culoare-text: #000;
-$culoare-text-selectat: #fff;
-$culoare-inchisa: #ffcc00;
-$inaltime-meniu: 40px;
-
-// Stiluri pentru elementele meniului
-#acasa-mediu {
+#hamburger,
+#ch-menu {
     display: none;
 }
 
+
 .meniu {
+    list-style-type: none;
     display: flex;
+    align-items: center;
+    background-color: #ffcc00;
 
     ul {
-        list-style-type: none; // elimină punctul din fața elementelor din meniu
+        list-style-type: none;
         padding: 0;
         margin: 0;
     }
 
     li {
+        list-style-type: none;
         text-align: center;
         box-sizing: border-box;
-        background-color: $culoare-inchisa;
+        margin-right: 10px;
+        min-width: 6em;
+        background-color: #ffcc00;
 
-        div,
         a {
             display: block;
             width: 100%;
             height: 100%;
             cursor: pointer;
-            line-height: $inaltime-meniu;
-            color: $culoare-text;
+            line-height: 40px;
+            color: #000;
             text-decoration: none;
             box-sizing: border-box;
             transition: all 1s linear;
 
             &:hover {
-                background-color: darken($culoare-inchisa, 10%);
-                color: $culoare-text-selectat;
+                background-color: darken(#ffcc00, 10%);
+                color: #fff;
             }
         }
 
-        &:hover > div,
-        &:hover > a {
-            background-color: $culoare-inchisa;
-            color: $culoare-text-selectat;
+        #casuta {
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            line-height: 40px;
+            color: #000;
+            text-decoration: none;
+            box-sizing: border-box;
+            transition: all 1s linear;
+            align-items: center;
+            display: flex;
+            gap: 5px;
+
+            #acasa{
+                opacity: 0;
+                transition: opacity 1s ease;
+            }
+            
+            &:hover {
+                #acasa{
+                    opacity: 1;
+                }
+                background-color: darken(#ffcc00, 10%);
+                color: #fff;
+            }
         }
 
-        &:hover > ul {
+
+        &:hover>ul {
             display: block;
             position: absolute;
             z-index: 100;
             opacity: 0;
-            transform: scaleY(0);
-            transform-origin: center top;
+            transform: scale(0);
+            transform-origin: top;
         }
     }
 
-    // Submeniu
     ul {
         display: none;
         animation: animatie_submeniu 1s linear 1 forwards;
