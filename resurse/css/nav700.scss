@@ -1,35 +1,34 @@
+// Variables
+$inaltime-meniu: 10px; // Example value, replace with desired height
+
+// Styles
 #hamburger {
   display: block;
 
-  img {
-    height: 30px;
-    display: block;
-  }
-  &:checked .meniu{
+  > img {
+    height: var(--inaltime-meniu);
     display: block;
   }
 }
 
 ul.meniu {
   display: none;
-  /*position: absolute;*/
+  position: absolute;
+  width: 100%;
 }
 
-
-/*aici facem vizibil meniul cand faem click pe hamburger meniu*/
-#ch-menu:checked+ul.meniu {
+#ch-menu:checked + ul.meniu {
   display: block;
-  /*z-index: 2;
+  z-index: 2;
   position: relative;
-*/
-  animation: aparitie_meniu_p 0.7s linear forwards;
   
+  animation: aparitie_meniu_p 0.7s linear forwards;
 
-  >li>div,
-  >li>a {
-    /*z-index: 2;
+  > li > div,
+  > li > a {
+    z-index: 2;
     position: relative;
-    */
+    transform-origin: 50% 50%;
     animation: aparitie_meniu_p_btn 0.7s linear forwards;
   }
 }
@@ -39,7 +38,7 @@ nav {
     width: 100%;
   }
 
-  ul.meniu>li ul {
+  ul.meniu > li ul {
     position: absolute;
     width: 100%;
     z-index: 200;
@@ -47,17 +46,23 @@ nav {
     opacity: 1 !important;
   }
 
-  #ch-menu:checked+ul.meniu>li ul>* {
+  #ch-menu:checked + ul.meniu > li ul > * {
     position: relative;
     z-index: 200;
   }
 
-  ul.meniu>li:hover>ul {
+  ul.meniu > li:hover > ul {
     z-index: 200;
     animation: none;
   }
+
+  ul.meniu > li li a:before {
+    content: "\25B7\00A0";
+    color: white;
+  }
 }
 
+// Keyframes
 @keyframes aparitie_meniu_p {
   0% {
     opacity: 0;
