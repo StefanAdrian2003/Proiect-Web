@@ -1,79 +1,71 @@
+#ch-menu {
+  display: none;
+}
+
 #hamburger {
   display: block;
+  background-color: #ffcc00;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
 
-  img {
-    height: 30px;
-    display: block;
-  }
-  &:checked .meniu{
-    display: block;
+  .bar {
+    height: 5px;
+    background-color: white;
+    margin: 6px;
+    width: 30px;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 8px;
+    }
+
+    &:nth-child(3) {
+      top: 16px;
+    }
   }
 }
 
 ul.meniu {
+  margin: 0;
+  padding: 0;
   display: none;
-  /*position: absolute;*/
+  transform-origin: top; /* Set the transform origin to top */
+
+  > li {
+    > ul {
+      left: 0;
+      right: 0;
+    }
+  }
 }
 
-
-/*aici facem vizibil meniul cand faem click pe hamburger meniu*/
-#ch-menu:checked+ul.meniu {
+/* Make menu visible when the hamburger menu is clicked */
+#ch-menu:checked + ul.meniu {
   display: block;
-  /*z-index: 2;
-  position: relative;
-*/
-  animation: aparitie_meniu_p 0.7s linear forwards;
-  
-
-  >li>div,
-  >li>a {
-    /*z-index: 2;
-    position: relative;
-    */
-    animation: aparitie_meniu_p_btn 0.7s linear forwards;
-  }
+  position: absolute;
+  width: 100%;
+  animation: aparitie_meniu_p 0.7s linear 1 forwards;
 }
 
-nav {
-  ul.meniu li {
-    width: 100%;
-  }
-
-  ul.meniu>li ul {
-    position: absolute;
-    width: 100%;
-    z-index: 200;
-    transform: scale(1, 1) !important;
-    opacity: 1 !important;
-  }
-
-  #ch-menu:checked+ul.meniu>li ul>* {
-    position: relative;
-    z-index: 200;
-  }
-
-  ul.meniu>li:hover>ul {
-    z-index: 200;
-    animation: none;
-  }
-}
-
+/* Keyframes for menu animation */
 @keyframes aparitie_meniu_p {
   0% {
     opacity: 0;
+    transform: scaleY(0); /* Ensure this matches initial state */
   }
-
   100% {
     opacity: 1;
+    transform: scaleY(1); /* Expand the menu from top to bottom */
   }
 }
 
-@keyframes aparitie_meniu_p_btn {
-  0% {
-    transform: scale(0, 0);
-  }
-
-  100% {
-    transform: scale(1, 1);
-  }
+ul.meniu > li > #casuta > #acasa {
+  display: none;
 }

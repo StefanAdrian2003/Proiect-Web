@@ -1,0 +1,107 @@
+{
+	"cale_galerie":"resurse/imagini/galerie",
+	"imagini": [
+		{
+			"fisier": "jante1.jpg",
+			"titlu": "poza1",
+			"descriere": "Jante din aliaj ușor",
+			"anotimp": ["iarna", "vara"]
+		},
+		{
+			"fisier": "jante2.jpg",
+			"titlu": "poza2",
+			"descriere": "Jante cromate",
+			"anotimp": ["primavara"]
+		},
+		{
+			"fisier": "jante3.jpg",
+			"titlu": "poza3",
+			"descriere": "Jante sport",
+			"anotimp": ["toamna", "iarna"]
+		},
+		{
+			"fisier": "jante4.jpg",
+			"titlu": "poza4",
+			"descriere": "Jante pentru SUV",
+			"anotimp": "vara"
+		},
+		{
+			"fisier": "jante5.jpg",
+			"titlu": "poza5",
+			"descriere": "Jante negre mate",
+			"anotimp": ["primavara", "toamna"]
+		},
+		{
+			"fisier": "jante6.jpg",
+			"titlu": "poza6",
+			"descriere": "Jante cu finisaj lucios",
+			"anotimp": ["iarna", "primavara", "vara"]
+		},
+		{
+			"fisier": "jante7.jpg",
+			"titlu": "poza7",
+			"descriere": "Jante multifuncționale",
+			"anotimp": ["toamna"]
+		},
+		{
+			"fisier": "jante8.jpg",
+			"titlu": "poza8",
+			"descriere": "Jante cu 5 spițe",
+			"anotimp": ["primavara", "vara"]
+		},
+		{
+			"fisier": "jante9.jpg",
+			"titlu": "poza9",
+			"descriere": "Jante off-road",
+			"anotimp": ["iarna", "toamna"]
+		},
+		{
+			"fisier": "jante10.jpg",
+			"titlu": "poza10",
+			"descriere": "Jante personalizate",
+			"anotimp": ["vara", "toamna"]
+		},
+		{
+			"fisier": "jante11.jpg",
+			"titlu": "poza11",
+			"descriere": "Jante clasice",
+			"anotimp": ["primavara", "iarna", "vara"]
+		},
+		{
+			"fisier": "jante12.jpg",
+			"titlu": "poza12",
+			"descriere": "Jante retro",
+			"anotimp": ["toamna"]
+		},
+		{
+			"fisier": "jante13.jpg",
+			"titlu": "poza13",
+			"descriere": "Jante aerodinamice",
+			"anotimp": ["vara", "primavara"]
+		},
+		{
+			"fisier": "jante14.jpg",
+			"titlu": "poza14",
+			"descriere": "Jante pentru mașini sport",
+			"anotimp": ["iarna", "toamna"]
+		},
+		{
+			"fisier": "jante15.jpg",
+			"titlu": "poza15",
+			"descriere": "Jante lightweight",
+			"anotimp": ["vara"]
+		},
+		{
+			"fisier": "jante16.jpg",
+			"titlu": "poza16",
+			"descriere": "Jante rezistente la impact",
+			"anotimp": ["primavara", "vara", "toamna"]
+		},
+		{
+			"fisier": "jante17.jpg",
+			"titlu": "poza17",
+			"descriere": "Jante de înaltă performanță",
+			"anotimp": ["iarna", "primavara"]
+		}
+	]
+}

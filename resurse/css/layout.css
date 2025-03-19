@@ -28,8 +28,6 @@ html{
 
 
 
-
-
 #welcome{
     grid-area: welcome;
 }
@@ -126,3 +124,100 @@ html{
 
 
 
+/* Stiluri pentru grid-ul galeriei */
+#grid-galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trei coloane egale */
+    gap: 10px; /* Spațiu între imagini */
+    padding: 20px;
+    counter-reset: gallery-counter; /* Resetăm counter-ul */
+}
+
+#grid-galerie figcaption {
+    text-align: center;
+}
+
+#grid-galerie figure {
+    position: relative; /* Asigurăm o bază pentru poziționarea absolută a pseudoelementului */
+    overflow: hidden; /* Ascundem colțurile rotunjite care ies în afara imaginii */
+    border-radius: 15px; /* Colțuri rotunjite */
+    transition: transform 0.1s ease, opacity 0.1s ease; /* Tranziție pentru scalare și opacitate */
+}
+
+#grid-galerie figure:hover {
+    transform: scale(1.4); /* Scălare cu 40% față de centrul laturii de sus */
+    opacity: 0.5; /* Opacitate redusă */
+}
+
+#grid-galerie figure::before {
+    counter-increment: gallery-counter; /* Incrementăm counter-ul */
+    content: counter(gallery-counter, lower-roman) ". "; /* Adăugăm counter-ul în format roman */
+    color: white; /* Schimbăm culoarea numărătorii în alb */
+}
+
+/* Definim grid-area pentru fiecare figură */
+#grid-galerie > figure:nth-child(1) {
+    grid-area: 1/1/2/2;
+}
+
+#grid-galerie > figure:nth-child(2) {
+    grid-area: 1/2/2/3;
+}
+
+#grid-galerie > figure:nth-child(3) {
+    grid-area: 1/3/2/4;
+}
+
+#grid-galerie > figure:nth-child(4) {
+    grid-area: 2/1/3/2;
+}
+
+#grid-galerie > figure:nth-child(5) {
+    grid-area: 2/3/3/4;
+}
+
+#grid-galerie > figure:nth-child(6) {
+    grid-area: 3/1/4/2;
+}
+
+#grid-galerie > figure:nth-child(7) {
+    grid-area: 3/2/4/3;
+}
+
+#grid-galerie > figure:nth-child(8) {
+    grid-area: 3/3/4/4;
+}
+
+#grid-galerie > figure:nth-child(9) {
+    grid-area: 4/1/5/2;
+}
+
+#grid-galerie > figure:nth-child(10) {
+    grid-area: 4/3/5/4;
+}
+
+#grid-galerie > figure:nth-child(11) {
+    grid-area: 5/1/6/2;
+}
+
+#grid-galerie > figure:nth-child(12) {
+    grid-area: 5/2/6/3;
+}
+
+#grid-galerie > figure:nth-child(13) {
+    grid-area: 5/3/6/4;
+}
+
+/* Stiluri pentru ecran mediu */
+@media (max-width: 1024px) {
+    #grid-galerie {
+        grid-template-columns: repeat(2, 1fr); /* Două coloane egale */
+    }
+}
+
+/* Stiluri pentru ecran mic */
+@media (max-width: 600px) {
+    #grid-galerie {
+        grid-template-columns: 1fr; /* O coloană */
+    }
+}

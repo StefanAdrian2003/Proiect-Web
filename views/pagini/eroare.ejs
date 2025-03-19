@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title>MyWheel-eroare</title>
+        <meta name="keywords" content="jante, masini, auto, carbon, aluminiu, magneziu,  
+              livrare Bucuresti"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+        <meta name="description" content="Vindem <b>jante auto</b> potrivite pentru <b>masina ta</b>. <b>Jante</b> din <b>aluminiu</b>, <b>carbon</b>, 
+        <b>magneziu</b>, de diferite marimi, forme si materiale. <b>Livrare</b> in toata tara.">
+        <!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
+        <link rel="stylesheet" type="text/css" href="/resurse/css/eroare.css">
+        <%- include("../fragmente/head.ejs");  %> 
+
+
+    </head>
+    <body>
+        
+    <%- include("../fragmente/header.ejs");  %> 
+
+    <main>
+        <div id="err-coloane">
+			<div id="err-imag">
+				<img src="<%- locals.imagine %>" />
+			</div>
+			<section>
+				<h2><%- locals.titlu %></h2>
+				<p><%- locals.text %></p>
+			</section>
+		</div>
+    </main>
+    
+    <%- include("../fragmente/footer.ejs");  %> 
+
+
+    </body>
+</html>

@@ -1,0 +1,72 @@
+#ch-menu {
+    display: none;
+  }
+  
+  #hamburger {
+    display: block;
+    background-color: #ffcc00;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+  
+    .bar {
+      height: 5px;
+      background-color: white;
+      margin: 6px;
+      width: 30px;
+      position: absolute;
+      left: 0;
+      transition: all 0.3s ease;
+  
+      &:nth-child(1) {
+        top: 0;
+      }
+  
+      &:nth-child(2) {
+        top: 8px;
+      }
+  
+      &:nth-child(3) {
+        top: 16px;
+      }
+    }
+  }
+  
+  ul.meniu {
+    margin: 0;
+    padding: 0;
+    display: none;
+    transform-origin: top; /* Set the transform origin to top */
+  
+    > li {
+      > ul {
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+  
+  /* Make menu visible when the hamburger menu is clicked */
+  #ch-menu:checked + ul.meniu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    animation: aparitie_meniu_p 0.7s linear 1 forwards;
+  }
+  
+  /* Keyframes for menu animation */
+  @keyframes aparitie_meniu_p {
+    0% {
+      opacity: 0;
+      transform: scaleY(0); /* Ensure this matches initial state */
+    }
+    100% {
+      opacity: 1;
+      transform: scaleY(1); /* Expand the menu from top to bottom */
+    }
+  }
+  
+  ul.meniu > li > #casuta > #acasa {
+    display: none;
+  }
+  

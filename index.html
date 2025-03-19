@@ -24,20 +24,21 @@
     <meta name="theme-color" content="#ffffff">
 
 
-    <link rel="stylesheet" href="./resurse/css/nav.css">
-    
-    <link rel="stylesheet" href="./resurse/css/nav700.css" media="screen and (max-width:700px)" />
-
-
     <link rel="stylesheet" href="./resurse/css/general.css" type="text/css" />
     <link rel="stylesheet" href="./resurse/css/general1000.css" type="text/css" media="screen and (max-width:1000px)" />
     <link rel="stylesheet" href="./resurse/css/general700.css" type="text/css" media="screen and (max-width:700px)" />
 
+
+    <link rel="stylesheet" href="./resurse/css/nav.css">
+    <link rel="stylesheet" href="./resurse/css/nav700.css" media="screen and (max-width:700px)" />
+
+
     <link rel="stylesheet" href="resurse/css//layout.css" type="text/css" />
+
 
     <link rel="stylesheet" href="resurse/css//stil.css" type="text/css" />
 
-    
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -50,14 +51,24 @@
         <h1>MyWheel - Magazinul tau favorit de <b>jante</b></h1>
         <p class="Intro" style="color:#ffd60a; text-decoration: underline;">Va multumim ca ne vizitati site-ul!</p>
 
-    
+
         <label id="hamburger" for="ch-menu">
-            <img src="./resurse/imagini/Hamburger_icon_alb.png" alt="menu">
+            <!--<img src="./resurse/imagini/Hamburger_icon_alb.png" alt="menu">
+        -->
+            <a class="bar"></a>
+            <a class="bar"></a>
+            <a class="bar"></a>
         </label>
         <input id="ch-menu" type="checkbox">
         <ul class="meniu">
             <li>
-                <div id="casuta"><span class="fas fa-regular fa-house"></span> <div id="acasa">  Acasa</div></div>  
+                <div id="casuta">
+                    <span class="fas fa-regular fa-house">
+                    </span>
+                    <div id="acasa">
+                        Acasa
+                    </div>
+                </div>
                 <ul>
                     <li><a href="#welcome">Bine ati venit</a></li>
                     <li><a href="#tab-orar"> Program</a></li>
@@ -72,11 +83,19 @@
         </ul>
     </header>
 
+    <div id="banner">Nume Prenume</div>
+    <div id="watermark">
+        <p>Nume Prenume</p>
+    </div>
+    <div id="end"></div>
+
     <main>
         <div id="grid-pagina">
             <section id="welcome">
                 <h2>Bine ați venit la Magazinul nostru de <b>jante Auto</b>!</h2>
+                <i class="fa-solid fa-arrow-right"></i>
                 <q class="atentionare">First you learn, then remove the "L" . - Someone on the internet</q>
+                <i class="fa-solid fa-arrow-left"></i>
                 <p>Suntem încântați să vă primim pe site-ul nostru dedicat pasionaților de <b>mașini</b> și de tot ce
                     înseamnă
                     stil și performanță.</p>
@@ -172,28 +191,32 @@
 
             <section id="calendar-evenimente">
                 <h2>Calendarul Evenimentelor</h2>
-                <!--
+
                 <ul>
-                    <li><strong>Lansare nouă colecție de jante:</strong> Descoperiți cele mai recente modele de jante pentru mașina dvs. 
-                        Data: 10 aprilie 2024, 
+                    <li><strong>Lansare nouă colecție de jante:</strong> Descoperiți cele mai recente modele de jante
+                        pentru mașina dvs.
+                        Data: 10 aprilie 2024,
                         Ora: 10:00 - 18:00
                     </li>
 
-                    <li><strong>Eveniment demonstrativ:</strong> Demonstrare live a performanțelor jantelor din carbon. Veniți să vedeți 
-                        jantele în acțiune! Data: 15 aprilie 2024, 
+                    <li><strong>Eveniment demonstrativ:</strong> Demonstrare live a performanțelor jantelor din carbon.
+                        Veniți să vedeți
+                        jantele în acțiune! Data: 15 aprilie 2024,
                         Ora: 14:00 - 16:00
                     </li>
 
-                    <li><strong>Concurs de tuning auto:</strong> Participați la concursul nostru și aveți șansa să câștigați un set de 
+                    <li><strong>Concurs de tuning auto:</strong> Participați la concursul nostru și aveți șansa să
+                        câștigați un set de
                         jante personalizate! Data: 25 aprilie 2024, Ora: 12:00 - 15:00
                     </li>
 
-                    <li><strong>Sesiune de întrebări și răspunsuri:</strong> Aveți întrebări despre alegerea și întreținerea jantelor auto?
-                         Echipa noastră de experți vă stă la dispoziție! Data: 30 aprilie 2024, Ora: 16:00 - 18:00
+                    <li><strong>Sesiune de întrebări și răspunsuri:</strong> Aveți întrebări despre alegerea și
+                        întreținerea jantelor auto?
+                        Echipa noastră de experți vă stă la dispoziție! Data: 30 aprilie 2024, Ora: 16:00 - 18:00
                     </li>
 
                 </ul>
-          -->
+
                 <img src="./resurse/imagini/working.avif" alt="Descriere imagine" width="300" height="170">
 
             </section>
@@ -238,10 +261,41 @@
                 <p>Un minunat nou set de <b>jante</b> vă așteaptă! Luați-l săptămâna aceasta la doar jumătate de
                     preț! Grăbiți-vă, stocul este limitat!</p>
                 <figure>
-                    <source srcset="./resurse/imagini/mercedes-benz-1277977_640.jpg" media="(max-width:700px)" />
-                    <source srcset="./resurse/imagini/wheel-7043351_640.jpg" media="(max-width:1200px)" />
-                    <img src="./resurse/imagini/wheel-2778703_640.jpg" alt="imagine jante">
-                    <figcaption><b>Jante carbon</b></figcaption>
+                    <picture>
+                        <source srcset="./resurse/imagini/mercedes-benz-1277977_640.jpg" media="(max-width:700px)" />
+                        <source srcset="./resurse/imagini/wheel-7043351_640.jpg" media="(max-width:1200px)" />
+                        <img src="./resurse/imagini/wheel-2778703_640.jpg" alt="imagine jante">
+                    </picture>
+                    <figcaption>
+                        <b>Jante carbon</b>
+
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mrow class="mathml-blue">
+                                <mtext>Compoziția unei roți:</mtext>
+                            </mrow>
+                            <mrow>
+                                <mfrac class="mathml-green">
+                                    <mrow>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>4</mn>
+                                    </mrow>
+                                </mfrac>
+                                <mtext class="mathml-red"> magneziu și </mtext>
+                                <mfrac class="mathml-purple">
+                                    <mrow>
+                                        <mn>3</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>4</mn>
+                                    </mrow>
+                                </mfrac>
+                                <mtext class="mathml-orange"> carbon</mtext>
+                            </mrow>
+                        </math>
+
+                    </figcaption>
                 </figure>
             </section>
         </section>
@@ -303,8 +357,7 @@
 
         <div class="container-iframe">
 
-            <iframe name="iframe1" width="560" height="315" src="https://www.youtube.com/embed/c5dGVEL3wE0"
-                frameborder="0" allowfullscreen></iframe>
+            <iframe name="iframe1" src="https://www.youtube.com/embed/c5dGVEL3wE0" allowfullscreen></iframe>
 
             <div class="taburi-iframe">
                 <a href="https://www.youtube.com/embed/c5dGVEL3wE0" target="iframe1">Video 1</a>
@@ -327,15 +380,19 @@
 
         <a href="#" title="mergi sus" id="link-top">
             <div id="sageata">
-                <p>&#129081</p>
+                <p>
+                    &#129081;
+                </p>
             </div>
         </a>
     </main>
 
     <footer>
         <div>
-            <a href="./resurse/imagini/favi.jpg" download>Descarcă Favicon</a>
+            <a href="./resurse/imagini/favi.jpg" class="download-btn" download>Descarcă Favicon</a>
+            <i class="fa-solid fa-download animated-icon"></i>
         </div>
+
 
         <address>
             Telefon: <a href="tel:+123456789">+123456789</a><br>

@@ -1,8 +1,203 @@
+/*RESETARE CSS*/
+/*RESETARE CSS*/
+/*RESETARE CSS*/
+
+/* https://meyerweb.com/eric/tools/css/reset/ 
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+
+/*
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/*REDEFINIREA SPATIERILOR*/
+/*REDEFINIREA SPATIERILOR
+
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffd60a;
+  --font-size-base: 16px;
+  --spacing-base: 1rem;
+}
+
+body {
+  font-size: var(--font-size-base);
+  color: var(--primary-color);
+  background-color: #ffffff;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: var(--spacing-base);
+}
+
+p {
+  margin-bottom: var(--spacing-base);
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+ul, ol {
+  margin-bottom: var(--spacing-base);
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+table {
+  width: 100%;
+  margin-bottom: var(--spacing-base);
+  border: 1px solid var(--primary-color);
+}
+
+th, td {
+  padding: 0.5rem;
+  text-align: left;
+  border: 1px solid var(--primary-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+*/
+
+
+
+/*STILIZARE LINK URI*/
+/*STILIZARE LINK URI*/
+
+
+
+
+
+a:visited {
+  color: #ffc300;
+}
+
+a:active {
+  color: red;
+}
+
+a:link {
+  color: darkblue;
+  position: relative; 
+  display: inline-block; 
+}
+
+
+a[href^="http"]::before {
+  content: "⮳";
+  font-size: 1.5em;
+  margin-right: 0.2em;
+}
+
+
+main a:active {
+  border: 2px solid #000;
+}
+
+
+main a[href^="http"]:hover::before {
+  color: #ff5733;
+}
+
+
+main a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(red 0%, red 40%, transparent 80%, transparent 100%);
+  transition: width 0.5s, height 0.5s;
+  transform: translate(-50%, -50%);
+  z-index: -1; 
+  pointer-events: none; 
+}
+
+main a:hover::after {
+  width: 100%;
+  height: 1.5em;
+  top: 50%;
+  left: 50%;
+}
+
+
+
+
+
+/*taburi iframe*/
+/*taburi iframe*/
+
 .container-iframe {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
 
   iframe {
+    width: 560px;
+    height: 315px;
     margin-top: 20px;
     border: 4px solid #ffc300;
   }
@@ -45,7 +240,6 @@
   box-sizing: border-box;
   border-radius: 50% 50% 0 0;
   background: var(--culoare4);
-  /* Schimbă culoarea de fundal a butonului */
   opacity: 50%;
   box-shadow: inset 0 0 10px var(--culoare2);
   /* Schimbă umbra butonului */
@@ -74,6 +268,10 @@
 }
 
 
+
+/*ORARUL*/
+/*ORARUL*/
+
 #tab-orar th,
 #tab-orar td {
   border: 4px solid black;
@@ -89,3 +287,197 @@
 #tab-orar thead th:nth-child(2n + 1) {
   background-color: #003566;
 }
+
+
+
+
+
+
+/*PRINTARE*/
+/*PRINTARE*/
+
+#banner {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  border: 4px dotted black;
+  padding: 10px;
+  text-align: center;
+}
+
+#watermark {
+  display: none;
+  position: fixed;
+  width: 100px;
+  height: 2cm;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px double black;
+  opacity: 0.65;
+  z-index: 9999;
+}
+
+@media print {
+  #banner {
+      display: block;
+  }
+
+  #watermark {
+      display: block;
+  }
+
+  html {
+      margin-left: 2.5cm;
+      margin-right: 0.5cm;
+  }
+
+  @page :left {
+      margin-left: 2.5cm;
+      margin-right: 0.5cm;
+  }
+  @page :right {
+      margin-left: 0.5cm;
+      margin-right: 2.5cm;
+  }
+
+  main {
+      display: block;
+  }
+
+  img,
+  video,
+  iframe,
+  a[href="#top"] {
+      display: none;
+  }
+
+  a {
+      text-decoration: none;
+      color: inherit;
+  }
+
+  h1 {
+      text-align: center;
+      font-size: 2.5em;
+      text-decoration: underline;
+      page-break-after: always;
+  }
+
+  nav {
+      display: none;
+  }
+
+  header,
+  footer {
+      page-break-before: always;
+  }
+
+  #end {
+      page-break-before: always;
+  }
+}
+
+
+
+
+/*ICON ANIMAT*/
+/*ICON ANIMAT*/
+
+.animated-icon {
+  display: inline-block;
+  font-size: 25px;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+
+.animated-icon:hover {
+  transform: rotate(360deg);
+}
+
+
+
+
+/*STILIZARE FORMULA MATHML*/
+/*STILIZARE FORMULA MATHML*/
+
+.mathml-blue mtext {
+  color: blue;
+}
+
+.mathml-green mn {
+  color: green;
+  font-style: italic;
+}
+
+.mathml-red mtext {
+  color: red;
+}
+
+.mathml-purple mn {
+  color: purple;
+  font-weight: bold;
+}
+
+.mathml-orange mtext {
+  color: orange;
+}
+
+/*REFLEXIE text*/
+
+#container {
+  position: relative;
+  display: inline-block;
+  font-family: "Metal Mania", system-ui;
+  font-weight: 100;
+  font-style: normal;
+}
+
+#text_ref {
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  position: relative;
+}
+
+#text-reflected {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform-origin: 0 0;
+  transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(10px, -25px);
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+  filter: blur(2px);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+#container:hover #text-reflected {
+  transform: rotateX(180deg) skew(-45deg) scaleY(1) translate(10px, -35px);
+  filter: blur(1px);
+}
+
+
+/*GRADIENT HR*/
+
+.hr-styled {
+  height: 4px; /* Înălțimea liniei */
+  background-image: linear-gradient(
+    135deg,
+    #ffc300 0%, #ffc300 25%, 
+    transparent 25%, transparent 30%, 
+    #ffc300 30%, #ffc300 65%, 
+    transparent 65%, transparent 70%, 
+    #ffc300 70%, #ffc300 100% 
+  );
+  border: none; 
+  margin: 20px 0; 
+}
+
+
+

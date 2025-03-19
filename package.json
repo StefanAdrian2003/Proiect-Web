@@ -1,0 +1,19 @@
+{
+  "name": "asus",
+  "version": "1.0.0",
+  "description": "Acest site prezinta o gama larga de jante auto speciale pentru gusturile fiecaruia!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bichel Stefan - Adrian",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "ejs": "^3.1.9",
+    "express": "^4.19.1",
+    "pg": "^8.12.0",
+    "sass": "^1.77.6",
+    "sharp": "^0.33.4"
+  }
+}
